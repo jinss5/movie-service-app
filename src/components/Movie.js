@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 
-function Movie({ id, year, title, summary, poster, genres }) { //utilized function instead of class because state component is not used
+function Movie({ /*id,*/ year, title, summary, poster, genres }) { //utilized function instead of class because state component is not used
     return (
         <div className="movie">
             <img src={poster} alt={title} title={title} />

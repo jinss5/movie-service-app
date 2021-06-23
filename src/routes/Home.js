@@ -98,7 +98,7 @@ class Home extends React.Component {
         movies: []
     };
     getMovies = async () => {
-        const { //using brackets, {} you basically open up the object and take what is inside.
+        const { //using brackets, {}, you basically open up the object and take what is inside.
             data: {
                 data: { movies }
             }
@@ -115,6 +115,21 @@ class Home extends React.Component {
     render() {
         const { isLoading, movies } = this.state;
         return (
+            /* comment written to better understand the code below
+            <div>
+                {isLoading ? "Loading.."
+                : movies.map((movie) => {
+                    return <Movie        // Movie 함수 사용
+                        key={movie.id}
+                        id={movie.id}
+                        year={movie.year}
+                        title={movie.title}
+                        summary={movie.summary}
+                        poster={movie.medium_cover_image}
+                    />;
+                })}
+            </div>
+            */
             <section className="container">
                 {isLoading ? (
                     <div className="loader">
@@ -132,7 +147,7 @@ class Home extends React.Component {
                                 poster={movie.medium_cover_image}
                                 genres={movie.genres}
                             />  //passing information to Movie component
-                                //have given the movie component a prop(erty), key, with value, {movie.id}
+                                //have given the movie component a prop(erty), (key, id, year title, ...), with value, {movie.id}
                         ))}
                     </div>
                 )}
