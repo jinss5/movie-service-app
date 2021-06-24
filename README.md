@@ -1,4 +1,4 @@
 # Movie App
 
 React JS Fundamentals<br>
-https://jinss5.github.io/
+https://jinss5.github.io/movie_app/
