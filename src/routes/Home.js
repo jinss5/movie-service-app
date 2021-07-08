@@ -129,6 +129,11 @@ class Home extends React.Component {
                     />;
                 })}
             </div>
+            Conditional (ternary) operator / 삼항 조건 연산자
+            for { A ? (B) : (C) }
+            if A is true, B is called and when A is false, C is called.
+            therefore for the below code, when the page is loading, the text, Loading appears
+            and when the page finishes loading, the movie card section appears
             */
             <section className="container">
                 {isLoading ? (
@@ -147,7 +152,7 @@ class Home extends React.Component {
                                 poster={movie.medium_cover_image}
                                 genres={movie.genres}
                             />  //passing information to Movie component
-                                //have given the movie component a prop(erty), (key, id, year title, ...), with value, {movie.id}
+                                //have given the movie component a prop, (key, id, year title, ...), with value, {movie.id}
                         ))}
                     </div>
                 )}
