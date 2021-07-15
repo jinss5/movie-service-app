@@ -1,20 +1,20 @@
-import React from "react";
+import React from 'react';
 import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
-import Home from "./routes/Home"
-import About from "./routes/About"
-import Detail from "./routes/Detail";
-import Page from "./routes/Page"
-import Navigation from "./components/Navigation";
+import Home from "./movie/Home";
+import About from "./movie/routes/About";
+import Detail from "./movie/routes/Detail";
+import Page from "./movie/routes/Page";
+import Navigation from "./movie/components/Navigation";
 
 function App() {
     return (
       <Router>
         <Navigation />
-        <Route path="/" exact={true} component={Home} />
+          <Route path="/" exact={true} component={Home} />
           <Route path="/movie/:id" component={Detail} />
-        <Route path="/about" component={About} />
-        <Route path="/page" component={Page} />
-        <Redirect to={"/"}/>
+          <Route path="/about" component={About} />
+          <Route path="/page" component={Page} />
+          <Redirect to={"/"}/>
       </Router>
     );
 }

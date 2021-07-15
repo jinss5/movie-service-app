@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios"; //utilized axios instead of fetch
-import Movie from "../components/Movie";
+import Card from "./components/Card";
 import "./Home.css";
 
 //below is practice done over JSX and PROPS
@@ -119,7 +119,7 @@ class Home extends React.Component {
             <div>
                 {isLoading ? "Loading.."
                 : movies.map((movie) => {
-                    return <Movie        // Movie 함수 사용
+                    return <Card        // Card 함수 사용
                         key={movie.id}
                         id={movie.id}
                         year={movie.year}
@@ -143,7 +143,7 @@ class Home extends React.Component {
                 ) : (
                     <div className="movies">
                         {movies.map(movie => (
-                            <Movie
+                            <Card
                                 key={movie.id} //to fix error: Warning: Each child in a list should have a unique "key" prop.
                                 id={movie.id}
                                 year={movie.year}
@@ -151,7 +151,7 @@ class Home extends React.Component {
                                 summary={movie.summary}
                                 poster={movie.medium_cover_image}
                                 genres={movie.genres}
-                            />  //passing information to Movie component
+                            />  //passing information to Card component
                                 //have given the movie component a prop, (key, id, year title, ...), with value, {movie.id}
                         ))}
                     </div>
