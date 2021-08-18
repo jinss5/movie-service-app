@@ -1,3 +1,3 @@
 # Card App
 
-React, Axios, React Router<br>
+Practice retrieving data from an API
